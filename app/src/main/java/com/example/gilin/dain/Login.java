@@ -19,8 +19,6 @@ public class Login extends Fragment {
 
     private FragmentLoginBinding binding;
 
-    public Login() {}
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
