@@ -12,21 +12,22 @@
         android:id="@+id/sulzzung_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="7dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-61dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ulzzung_textView1"
                 android:layout_width="46dp"
                 android:layout_height="47dp"
-                android:text="&#60;"
-                android:clickable="true"
                 android:layout_marginLeft="17dp"
+                android:clickable="true"
+                android:text="&#60;"
                 android:textSize="28sp" />
 
             <TextView
@@ -35,23 +36,23 @@
                 android:layout_height="47dp"
                 android:text="설정"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
-            android:background="#CCA00D"
+            android:layout_marginTop="7dp"
             android:layout_marginBottom="13dp"
-            android:layout_marginTop="7dp"/>
+            android:background="#CCA00D" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="19dp"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="20dp"
             app:cardBackgroundColor="#FAF1D3">
 
@@ -83,9 +84,9 @@
             android:layout_width="353dp"
             android:layout_height="51dp"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="19dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             app:cardBackgroundColor="#FAF1D3">
 
             <TextView
@@ -112,9 +113,9 @@
             android:id="@+id/sulzzung_textView3"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:text="어플이 실행되지 않은 경우에도 긴급전화 기능을 실행합니다."
-            android:translationX="21dp"
-            android:layout_marginBottom="22dp"/>
+            android:translationX="21dp" />
 
         <TextView
             android:id="@+id/sulzzung_textView4"
@@ -162,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
             android:layout_marginEnd="19dp"
-            android:layout_marginBottom="22dp"
+            android:layout_marginBottom="20dp"
             app:cardBackgroundColor="#FAF1D3">
 
             <TextView
@@ -272,13 +273,13 @@
             android:id="@+id/sulzzung_button7"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
             android:text="변경사항 저장"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:padding="10dp" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
