@@ -4,12 +4,12 @@
     <item
         android:id="@+id/a"
         android:icon="@drawable/a"
-        android:title="사고다발"/>
+        android:title="주의구간"/>
 
     <item
         android:id="@+id/b"
         android:icon="@drawable/b"
-        android:title="안전벨"/>
+        android:title="안심"/>
 
     <item
         android:id="@+id/myPage"
