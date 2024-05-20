@@ -1,14 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".dain.Join">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="" />
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="18dp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/join_back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="19dp"
+                android:clickable="true"
+                android:text="&#60;"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="64dp"
+                android:text="길인 회원가입"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:text="이름"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/join_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/join"
+            android:hint="이름"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/join_nameError"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="6dp"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:text="아이디"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/join_id"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/join"
+                android:hint="아이디"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/white" />
+
+            <android.widget.Button
+                android:id="@+id/join_authenticationSend"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:minHeight="26dp"
+                android:text="인증번호 전송"
+                android:textSize="13sp"
+                android:textColor="#F3F3F3"
+                android:background="@drawable/button_a"
+                android:layout_centerVertical="true"
+                android:layout_alignEnd="@id/join_id"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/join_idError"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="6dp"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:text="인증번호"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/join_authentication"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/join"
+                android:hint="인증번호"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/white" />
+
+            <android.widget.Button
+                android:id="@+id/join_authenticationCheck"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:minHeight="26dp"
+                android:text="인증번호 확인"
+                android:textSize="13sp"
+                android:textColor="#F3F3F3"
+                android:background="@drawable/button_a"
+                android:layout_centerVertical="true"
+                android:layout_alignEnd="@id/join_authentication"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/join_authenticationError"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="6dp"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:text="비밀번호 만들기"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/join_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/join"
+            android:hint="비밀번호(영문+숫자 8자 이상)"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/join_passwordError"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="6dp"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="15dp"
+            android:text="비밀번호 확인"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/join_passwordCheck"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/join"
+            android:hint="비밀번호(영문+숫자 8자 이상)"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/join_passwordReError"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="11sp" />
+
+        <android.widget.Button
+            android:id="@+id/join_passwordButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_a"
+            android:text="회원가입 완료"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
