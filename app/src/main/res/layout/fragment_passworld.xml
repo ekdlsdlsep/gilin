@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hyelin.Passworld"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/password_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/password_back"
+                android:layout_width="46dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="17dp"
+                android:clickable="true"
+                android:text="&#60;"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="비밀번호 재설정"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="13dp"
+            android:background="#CCA00D" />
+
+        <TextView
+            android:id="@+id/password_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="새로운 비밀번호를 입력해 주세요."
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationX="19dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/password_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textSize="15sp"
+            android:translationX="19dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="353dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="#FFFDF0">
+
+            <TextView
+                android:id="@+id/ori_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="비밀번호(8~32자리)"
+                android:textColor="#808080"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:translationX="10dp"
+                android:translationY="13dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="353dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="17dp"
+            app:cardBackgroundColor="#FFFDF0">
+
+            <TextView
+                android:id="@+id/newpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="비밀번호 재입력"
+                android:textColor="#808080"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:translationX="10dp"
+                android:translationY="13dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/password_text1"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="- 비밀번호는 8 ~32 자의 영문 대소문자, 숫사, 특수문자를
+            조합하여 설정해 주세요."
+            android:textSize="15sp"
+            android:translationX="19dp" />
+
+        <TextView
+            android:id="@+id/password_text2"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="- 다른사이트에서 사용하는 것과 동일하거나 쉬운 비밀번호
+            는 사용하지 마세요."
+            android:textSize="15sp"
+            android:translationX="19dp" />
+
+        <TextView
+            android:id="@+id/password_text3"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="- 안전한 계정 사용을 위해 비밀번호는 주기적으로 변경해
+            주세요."
+            android:textSize="15sp"
+            android:translationX="19dp" />
+
+        <Button
+            android:id="@+id/password_button_yes"
+            android:layout_width="362dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#CCA000"
+            android:text="변경사항 저장"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

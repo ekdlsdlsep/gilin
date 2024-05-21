@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hyelin.Passworld"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/gaejung_bye_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gaejung_bye_back"
+                android:layout_width="46dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="17dp"
+                android:clickable="true"
+                android:text="&#60;"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/sulzzung_textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="계정 탈퇴"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="13dp"
+            android:background="#CCA00D" />
+
+        <TextView
+            android:id="@+id/gaejung_bye_longwrite"
+            android:layout_width="match_parent"
+            android:layout_height="491dp"
+            android:layout_marginTop="10dp"
+            android:text="계정 탈퇴 약관 1. 약관 동의 계정 탈퇴를 진행하기 전에 본 약관을 주의 깊게 읽어보시고 이해하신 후 동의해 주시기 바랍니다.
+            2. 계정 탈퇴2.1. 계정 탈퇴는 영구적이며, 한 번 삭제된 계정은 복구할 수 없습니다.
+2.2. 계정을 삭제함으로써 해당 계정에 관련된 모든 데이터, 정보, 컨텐츠가 삭제됩니다.
+3. 데이터 보존 및 처3.1. 계정 탈퇴 시, 해당 계정과 관련된 모든 개인정보는 안전하게 삭제됩니다.
+3.2. 탈퇴 전에 백업이나 데이터 이전을 원하는 경우, 사용자는 별도의 조치를 취해야 합니다.
+4. 책임과 보안4.1. 사용자는 탈퇴 후에도 계정에 대한 책임을 부담하며, 탈퇴 전에 모든 보안 및 개인정보 보호를 신중히 책임져야 합니다.
+4.2. 계정 탈퇴는 사용자의 책임 하에 이루어지며, 탈퇴로 인한 어떠한 문제에 대해서도 서비스 제공자는 책임지지 않습니다.
+5. 탈퇴 절차5.1. 계정 탈퇴를 원하는 사용자는 앱 내 설정 메뉴에서 탈퇴 요청을 진행할 수 있습니다.
+5.2. 탈퇴 요청 후 일정한 확인 과정이 이루어진 후 계정이 삭제됩니다.
+6. 약관 변경6.1. 서비스 제공자는 본 약관을 변경할 권리를 갖고 있으며, 변경 시 별도의 통지 없이 적용될 수 있습니다.
+6.2. 변경된 약관은 사용자가 서비스를 계속 이용함으로써 자동으로 효력이 발생합니다.
+7. 문의 사항계정 탈퇴 약관 또는 기타 문의 사항이 있을 경우, 언제든지 서비스 제공자에게 문의하여 안내를 받을 수 있습니다.
+8. 유효성
+본 약관은 유효한 이메일, 서비스 내 알림, 또는 웹사이트 등을 통해 사용자에게 통지된 시점부터 효력이 발생합니다."
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/gaejungbye_button_yes"
+            android:layout_width="362dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#CCA000"
+            android:text="길인계정 탈퇴"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/gaejungbye_button_no"
+            android:layout_width="362dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#CCA000"
+            android:text="취소"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</FrameLayout>

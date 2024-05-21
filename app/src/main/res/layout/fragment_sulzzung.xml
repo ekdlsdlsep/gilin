@@ -130,38 +130,6 @@
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="0.5dp"
-            app:cardBackgroundColor="#FAF1D3">
-
-            <TextView
-                android:id="@+id/sulzzung_textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="아이디"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:translationX="10dp"
-                android:translationY="10dp" />
-
-            <Button
-                android:id="@+id/sulzzung_button1"
-                android:layout_width="255dp"
-                android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:text="&#62;"
-                android:textAlignment="textEnd"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:translationX="90dp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="353dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="20dp"
             app:cardBackgroundColor="#FAF1D3">
@@ -171,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="비밀번호"
+                android:text="비밀번호 재설정"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:translationX="10dp"
@@ -202,7 +170,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="356dp"
-            android:layout_height="53dp"
+            android:layout_height="46dp"
             android:layout_marginStart="19dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="19dp"
@@ -270,15 +238,14 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/sulzzung_button7"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
-            android:padding="10dp"
+            android:id="@+id/button"
+            android:layout_width="362dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#CCA000"
             android:text="변경사항 저장"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
     </LinearLayout>
