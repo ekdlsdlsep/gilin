@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gonji1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".hani.gongji">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="27dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gongji_back"
+                android:layout_width="46dp"
+                android:layout_height="47dp"
+                android:clickable="true"
+                android:text="&#60;"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="110dp"
+                android:paddingTop="7dp"
+                android:text="공지"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#CCA00D" />
+
+    <LinearLayout
+        android:id="@+id/GongjiLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GongjiSangdan">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gongjiBox1"
+            android:layout_width="match_parent"
+            android:layout_height="134dp" >
+
+            <TextView
+                android:id="@+id/gongjiDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024-05-15"
+                android:textAlignment="center"
+                android:translationX="30dp"
+                android:translationY="90dp" />
+
+            <TextView
+                android:id="@+id/gongjiTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목입니다."
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:translationX="30dp"
+                android:translationY="20dp" />
+
+            <TextView
+                android:id="@+id/gongjiNick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="| 닉네임"
+                android:translationX="105dp"
+                android:translationY="90dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/QnAWritedivider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gongjiBox2"
+            android:layout_width="match_parent"
+            android:layout_height="134dp">
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gongjiBox3"
+            android:layout_width="match_parent"
+            android:layout_height="134dp" >
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gongjiBox4"
+            android:layout_width="match_parent"
+            android:layout_height="134dp">
+
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/QnABox5"
+                android:layout_width="match_parent"
+                android:layout_height="134dp">
+
+            </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
