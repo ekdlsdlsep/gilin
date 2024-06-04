@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if ("x".equals(loginStatus)) {
             transferTo(new Login());
         } else {
-            transferTo(new Navigation());
+            transferTo(new Map());
         }
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
