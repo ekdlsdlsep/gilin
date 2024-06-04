@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.gilin.dain.Login;
+import com.example.gilin.dain.Navigation;
 import com.example.gilin.dain.Util.PreferenceUtil;
 import com.example.gilin.hani.mypage;
 import com.example.gilin.kst.Map;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if ("x".equals(loginStatus)) {
             transferTo(new Login());
         } else {
-            transferTo(new Map());
+            transferTo(new Navigation());
         }
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

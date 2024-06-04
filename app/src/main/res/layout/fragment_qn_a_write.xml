@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/QnAWrite1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".hani.QnAWrite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="27dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/qnawrite_back"
+                android:layout_width="46dp"
+                android:layout_height="47dp"
+                android:clickable="true"
+                android:text="&#60;"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="글쓰기"
+                android:layout_marginLeft="100dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#CCA00D" />
+
+    <LinearLayout
+        android:id="@+id/QnAWriteLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QnAWriteSangdan">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QnAWriteTitle"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:translationX="30dp"
+            android:translationY="12dp">
+
+            <TextView
+                android:id="@+id/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:translationX="7dp"
+                android:translationY="9dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/QnAWriteDetail"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:translationX="30dp"
+            android:translationY="20dp">
+
+            <TextView
+                android:id="@+id/DetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용을 입력하세요."
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:translationX="7dp"
+                android:translationY="9dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/FileCard"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:translationX="30dp"
+            android:translationY="38dp"
+            android:layout_marginBottom="40dp">
+
+            <android.widget.Button
+                android:id="@+id/FileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_a"
+                android:text="파일첨부"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:translationX="3dp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="31dp">
+
+        <TextView
+            android:id="@+id/PrivateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀글"
+            android:textSize="18sp"/>
+
+        <CheckBox
+            android:id="@+id/PrivateCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/WriteButton"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:background="#CCA00D"
+            android:text="작성"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationX="300dp"
+            android:translationY="30dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
