@@ -1,15 +1,18 @@
 package com.example.gilin.hani;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.example.gilin.R;
 import com.example.gilin.databinding.FragmentQnABinding;
+import com.example.gilin.hyelin.sulzzung;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class QnA extends Fragment {
 
@@ -22,14 +25,19 @@ public class QnA extends Fragment {
 
         binding.qnaBack.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new mypage());
+            fragmentTransaction.replace(R.id.contentView, new mypage());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+
+            BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_navigation);
+            if (bottomNavigationView != null) {
+                bottomNavigationView.setVisibility(View.VISIBLE);
+            }
         });
 
         binding.QnAWrite.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new QnAWrite());
+            fragmentTransaction.replace(R.id.contentView, new QnAWrite());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });

@@ -3,11 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayoutNavigation"
+    <com.skt.Tmap.TMapView
+        android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-    </LinearLayout>
-
+        android:layout_height="match_parent"/>
 </RelativeLayout>

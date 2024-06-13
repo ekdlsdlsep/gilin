@@ -16,11 +16,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="38dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/password_back"
+                android:id="@+id/password_Back"
                 android:layout_width="46dp"
                 android:layout_height="47dp"
                 android:layout_marginLeft="17dp"
@@ -29,10 +29,10 @@
                 android:textSize="28sp" />
 
             <TextView
-                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="47dp"
                 android:text="비밀번호 재설정"
+                android:layout_marginLeft="63dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:translationX="19dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/password_small"
@@ -62,7 +62,7 @@
             android:text="비밀번호"
             android:textSize="15sp"
             android:translationX="19dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             android:layout_marginLeft="10dp"/>
 
         <androidx.cardview.widget.CardView
@@ -73,13 +73,13 @@
             android:layout_marginTop="2dp"
             app:cardBackgroundColor="#FFFDF0">
 
-            <TextView
-                android:id="@+id/ori_password"
+            <EditText
+                android:id="@+id/change_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-medium"
-                android:text="비밀번호(8~32자리)"
-                android:textColor="#808080"
+                android:hint="비밀번호(8~32자리)"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:translationX="10dp"
@@ -96,25 +96,35 @@
             android:layout_marginEnd="17dp"
             app:cardBackgroundColor="#FFFDF0">
 
-            <TextView
-                android:id="@+id/newpassword"
+            <EditText
+                android:id="@+id/re_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="비밀번호 재입력"
-                android:textColor="#808080"
+                android:hint="비밀번호 재입력"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:translationX="10dp"
-                android:translationY="13dp" />
+                android:translationY="13dp"
+                android:background="@android:color/transparent"/>
 
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/password_error"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/password_text1"
             android:layout_width="358dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="11dp"
             android:text="- 비밀번호는 8 ~32 자의 영문 대소문자, 숫사, 특수문자를
             조합하여 설정해 주세요."
             android:textSize="15sp"

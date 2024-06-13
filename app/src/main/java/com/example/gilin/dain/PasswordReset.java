@@ -25,14 +25,14 @@ public class PasswordReset extends Fragment {
 
         binding.passwordResetBack.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new FindPassword());
+            fragmentTransaction.replace(R.id.contentView, new FindPassword());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
 
         binding.passwordResetButton.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new Login());
+            fragmentTransaction.replace(R.id.contentView, new Login());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
