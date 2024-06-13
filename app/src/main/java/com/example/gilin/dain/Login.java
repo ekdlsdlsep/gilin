@@ -84,6 +84,7 @@ public class Login extends Fragment {
                 binding.loginPassword.setBackgroundResource(R.drawable.error);
                 binding.loginError.setText("*비밀번호를 입력해주세요.");
                 isValid = false;
+                return;
             } else {
                 binding.loginPassword.setBackgroundResource(R.drawable.login_round2);
             }
@@ -102,14 +103,14 @@ public class Login extends Fragment {
         // 추후 추가
         binding.loginJoin.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new Join());
+            fragmentTransaction.replace(R.id.contentView, new Join());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
 
         binding.loginFindPassword.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new FindPassword());
+            fragmentTransaction.replace(R.id.contentView, new FindPassword());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });

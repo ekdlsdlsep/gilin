@@ -42,17 +42,16 @@ public class Join extends Fragment {
                 binding.joinNameError.setText("");
                 binding.joinIdError.setText("");
 
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-
-                PreferenceUtil.setUserId(getActivity(), userId);
-                PreferenceUtil.setLoginStatus(getActivity(), "o");
+                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.contentView, new Login());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
         binding.joinBack.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new Login());
+            fragmentTransaction.replace(R.id.contentView, new Login());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });

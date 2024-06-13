@@ -30,14 +30,14 @@ public class FindPassword extends Fragment {
 
         binding.findPasswordBack.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new Login());
+            fragmentTransaction.replace(R.id.contentView, new Login());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
 
         binding.findPasswordButton.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new PasswordReset());
+            fragmentTransaction.replace(R.id.contentView, new PasswordReset());
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
