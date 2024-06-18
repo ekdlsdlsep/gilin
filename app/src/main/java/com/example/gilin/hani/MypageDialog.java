@@ -1,6 +1,7 @@
 package com.example.gilin.hani;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +26,16 @@ public class MypageDialog extends DialogFragment {
         binding.mypageDialog.setImageResource(R.drawable.ic_launcher_foreground);
 
         binding.mypageChangeButton.setOnClickListener(v -> {
+            String newName = binding.editTextName.getText().toString();
+
+            // mypage 프래그먼트로 이름 전달
+            Bundle result = new Bundle();
+            result.putString("newName", newName);
+            getParentFragmentManager().setFragmentResult("requestKey", result);
+
             dismiss();
         });
+
         return binding.getRoot();
     }
 
