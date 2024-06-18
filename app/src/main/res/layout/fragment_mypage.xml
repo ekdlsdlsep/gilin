@@ -84,7 +84,7 @@
                     android:id="@+id/textView111"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:text="abc123@gmail.com"
+                    android:text="gilin@gmail.com"
                     android:textAlignment="center"
                     android:textColor="#5E5E5E"
                     android:translationX="123dp"

@@ -19,16 +19,20 @@
 
         <EditText
             android:id="@+id/search_data"
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:hint="도착지 입력"/>
 
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnStartGuidance"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@drawable/button_a"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:text="길찾기" />
 
     </LinearLayout>
