@@ -31,9 +31,9 @@ import com.example.gilin.dain.Login;
 import com.example.gilin.dain.Navigation;
 import com.example.gilin.dain.SearchList;
 import com.example.gilin.dain.Util.PreferenceUtil;
+import com.example.gilin.databinding.ActivityMainBinding;
 import com.example.gilin.hani.mypage;
 import com.example.gilin.kst.Map;
-import com.example.gilin.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.skt.Tmap.TMapData;
@@ -160,6 +160,12 @@ public class MainActivity extends BaseActivity implements TMapGpsManager.onLocat
 
         // Insert A SKT Logo on the Tmap.
         mMapView.setTMapLogoPosition(TMapView.TMapLogoPositon.POSITION_BOTTOMRIGHT);
+
+        ArrayList<TMapPoint> alTMapPoint = new ArrayList<>();
+        alTMapPoint.add(new TMapPoint(37.570841, 126.985302)); // SKT타워
+        alTMapPoint.add(new TMapPoint(37.551135, 126.988205)); // N서울타워
+        alTMapPoint.add(new TMapPoint(37.579600, 126.976998)); // 경복궁
+
     }
 
 
@@ -327,6 +333,7 @@ public class MainActivity extends BaseActivity implements TMapGpsManager.onLocat
 
         if (id == R.id.btnStartGuidance) {
             StartGuidance();
+
         }
     }
 
@@ -428,32 +435,68 @@ public class MainActivity extends BaseActivity implements TMapGpsManager.onLocat
      * StartGuidance()
      * 경로 그리기 메소드
      */
+//    public void StartGuidance() {
+//        mMapView.removeTMapPath();
+//
+////        setTrackingMode();
+//
+////        TMapPoint point1 = mMapView.getLocationPoint();
+////        TMapPoint point2 = Destination_Point;
+//        TMapPoint startpoint = new TMapPoint(35.16369868, 126.79749006);
+//        TMapPoint endpoint = new TMapPoint(35.16453193, 126.79840663);
+//
+//        TMapData tmapdata = new TMapData();
+//
+//        tmapdata.findPathDataWithType(TMapPathType.PEDESTRIAN_PATH, startpoint, endpoint, new FindPathDataListenerCallback() {
+//            @Override
+//            public void onFindPathData(TMapPolyLine polyLine) {
+//                polyLine.setLineColor(Color.BLUE);
+//                mMapView.addTMapPath(polyLine);
+//            }
+//        });
+//
+//        Bitmap start = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.poi_start);
+//        Bitmap end = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.poi_end);
+//        mMapView.setTMapPathIcon(start, end);
+//
+//        mMapView.zoomToTMapPoint(startpoint, endpoint);
+//    }
+
+
+    // 발표용
     public void StartGuidance() {
-        mMapView.removeTMapPath();
 
-//        setTrackingMode();
+        // 좌표 리스트
+        ArrayList<TMapPoint> alTMapPoint = new ArrayList<>();
+        alTMapPoint.add(new TMapPoint(35.16368, 126.7975));
+        alTMapPoint.add(new TMapPoint(35.165462937499996, 126.7984281125));
+        alTMapPoint.add(new TMapPoint(35.165462937499996, 126.8040003875));
+        alTMapPoint.add(new TMapPoint(35.176187562500004, 126.8040003875));
+        alTMapPoint.add(new TMapPoint(35.17799, 126.8049));
 
-//        TMapPoint point1 = mMapView.getLocationPoint();
-//        TMapPoint point2 = Destination_Point;
-        TMapPoint startpoint = new TMapPoint(35.16369868, 126.79749006);
-        TMapPoint endpoint = new TMapPoint(35.16453193, 126.79840663);
+        // TMapPolyLine 생성 및 설정
+        TMapPolyLine tMapPolyLine = new TMapPolyLine();
+        tMapPolyLine.setLineColor(Color.BLUE);
+        tMapPolyLine.setLineWidth(5); // 선의 두께 설정
 
-        TMapData tmapdata = new TMapData();
+        // 좌표 리스트에서 선을 그리기 위한 포인트 추가
+        for (TMapPoint point : alTMapPoint) {
+            tMapPolyLine.addLinePoint(point);
+        }
 
-        tmapdata.findPathDataWithType(TMapPathType.PEDESTRIAN_PATH, startpoint, endpoint, new FindPathDataListenerCallback() {
-            @Override
-            public void onFindPathData(TMapPolyLine polyLine) {
-                polyLine.setLineColor(Color.BLUE);
-                mMapView.addTMapPath(polyLine);
-            }
-        });
+        // 지도에 선 추가
+        mMapView.addTMapPath(tMapPolyLine);
 
-        Bitmap start = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.poi_start);
-        Bitmap end = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.poi_end);
-        mMapView.setTMapPathIcon(start, end);
+        // 경로의 시작점과 끝점 아이콘 설정 (옵션)
+        Bitmap startIcon = BitmapFactory.decodeResource(getResources(), R.drawable.poi_start); // 시작점 아이콘
+        Bitmap endIcon = BitmapFactory.decodeResource(getResources(), R.drawable.poi_end); // 끝점 아이콘
+        mMapView.setTMapPathIcon(startIcon, endIcon);
 
-        mMapView.zoomToTMapPoint(startpoint, endpoint);
+        // 경로가 보이도록 지도를 설정 (옵션)
+        mMapView.zoomToTMapPoint(alTMapPoint.get(0), alTMapPoint.get(alTMapPoint.size() - 1));
     }
+
+
 
     /**
      * setCompassMode
